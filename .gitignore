@@ -2,3 +2,4 @@
 /.vscode/settings.json
 *.pyc
 /db.sqlite3
+private_diary/__pycache__/settings.cpython-37.pyc
