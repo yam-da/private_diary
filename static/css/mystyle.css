@@ -1,9 +1,13 @@
-body, #wrapper{
-    diplay:flex;
-    flex-direction:column;
-    min-height:100vh;
+body, #wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-footer{
-    marge-top:auto;
+footer {
+    margin-top: auto;
+}
+
+.my-div-style {
+    margin-top:20rem;
 }
