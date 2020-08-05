@@ -41,12 +41,18 @@
                 </li>
               </ul>
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Log In</a>
-                </li>
+                {% if user.is_authenticated %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
+                  </li>
+                {% else %}
+                  <li class="nav-item {% block active_signup %}{% endblock %}">
+                      <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+                  </li>
+                  <li class="nav-item {% block active_login %}{% endblock %}">
+                    <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
+                  </li>
+                {% endif %}
               </ul>
             </div>
           </div>
@@ -54,14 +60,14 @@
 
         {% block header%}{% endblock %}
 
-        {% if messages%}
+        {% if messages %}
           <div class="container">
             <div class="row">
               <div class="my-div-style w-100">
-                <ul class="message" style="list-style:none;">
+                      <ul class="messages" style="list-style: none;">
                   {% for message in messages %}
-                  <li {%if message.tags %} class="{{message.tags }}" {% endif %}>
-                    {{message}}
+                          <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                              {{ message }}
                   </li>
                   {% endfor %}
                 </ul>
