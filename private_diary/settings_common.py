@@ -204,15 +204,17 @@ AUTHENTICATION_BACKENDS = (
 
 # メールアドレス認証に変更する設定
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_USERNAEME_REQUIRED = False
+ACCOUNT_USERNAME_REQUIRED = False
 
 # サインアップにメールアドレス確認をはさむよう設定
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # ログイン/ログアウト後の遷移先を設定
-LOGIN_REDIRECT_URL = 'diary:index'
+LOGIN_REDIRECT_URL = 'diary:diary_list'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 # ログアウトリンクのクリック一発でログアウトする設定
 ACCOUNT_LOGOUT_ON_GET = True
+
+MEDIA_URL = '/media/'
