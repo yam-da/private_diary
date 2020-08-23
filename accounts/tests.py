@@ -20,9 +20,9 @@ class TestLogin(LiveServerTestCase):
 
         # ログイン
         username_input = self.selenium.find_element_by_name("login")
-        username_input.send_keys('flwflite2@gmail.com')
+        username_input.send_keys('test@gmail.com')
         password_input = self.selenium.find_element_by_name("password")
-        password_input.send_keys('abcdefg1234')
+        password_input.send_keys('testtest')
 
         self.selenium.find_element_by_class_name('btn').click()
 
