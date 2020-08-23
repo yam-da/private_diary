@@ -1,5 +1,6 @@
 from .settings_common import *
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -14,7 +15,7 @@ LOGGING = {
     'loggers': {
         # Djangoが利用するロガー
         'django': {
-            'handlers':['console'],
+            'handlers': ['console'],
             'level': 'INFO',
         },
         # diaryアプリケーションが利用するロガー

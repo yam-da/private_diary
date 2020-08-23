@@ -23,9 +23,9 @@ class Migration(migrations.Migration):
                 ('photo1', models.ImageField(blank=True, null=True, upload_to='', verbose_name='写真1')),
                 ('photo2', models.ImageField(blank=True, null=True, upload_to='', verbose_name='写真2')),
                 ('photo3', models.ImageField(blank=True, null=True, upload_to='', verbose_name='写真3')),
-                ('create_at', models.DateTimeField(auto_now_add=True, verbose_name='作成日時')),
-                ('update_at', models.DateTimeField(auto_now=True, verbose_name='更新日時')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL, verbose_name='ユーザ')),
+                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='作成日時')),
+                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='更新日時')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL, verbose_name='ユーザー')),
             ],
             options={
                 'verbose_name_plural': 'Diary',
